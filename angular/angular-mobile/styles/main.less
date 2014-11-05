@@ -1,0 +1,65 @@
+@import "base";
+@import "functionLib";
+@import "var";
+.view{
+	padding: 1px 8px 4px 8px;
+	background-color: #ecf0f3;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling : touch;
+}
+
+.item{
+	min-height: 70px;
+	padding: 5px;
+	margin-top: 4px;
+	position: relative;
+	height: auto;
+	background-color: #fff;
+	color: #000;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0 1px #dedede,0 2px #ececec;
+	.img-wrap{
+		position: relative;
+		.title{
+			-webkit-border-top-right-radius: 5px;
+			border-top-right-radius: 5px;
+			-webkit-border-bottom-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			background: rgba(0,0,0,0.75);
+			font-size: 18px;
+			padding: 0 5px;
+			line-height: 24px;
+			color: #fff;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.preview{
+			width: 100%;
+			min-height: 50px;
+			height: auto;
+			-webkit-box-sizing: border-box;
+		}
+		.new-flag{
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			width: 31px;
+			height: 31px;
+		}
+	}
+	.info-wrap{
+		margin-top: 8px;
+		.item-price{
+			float: left;
+			font-size: 14px;
+			color: #fe6826;
+			&.free{
+				color: #01bdbb;
+			}
+		}
+	}
+}

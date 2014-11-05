@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.widget.min.js"></script>
+	<script src="metro-calendar.js"></script>
+	<script src="echo.min.js"></script>
+
+</head>
+<body class="metro">
+<div class="metro calendar date-picker datepicker metro-calendar">
+	<div class="input-control text calendar" id="datepicker">
+		<input type="text">
+		<button class="btn-date"></button>
+	</div>
+</div>
+<div class="tools metro-calendar">
+	起始日期：<div date-picker="dateStart" class="tools-block date-picker"></div>
+	结束日期：<div date-picker="dateEnd" class="tools-block date-picker"></div>
+	<div class="showChannel">该段时间销售额：<span class="alert">{{All | number:2}}</span></div>
+</div>
+<div class="view">
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+	<div class="item">
+		<div class="img-wrap">
+			<img class="preview" src="images/preview_default.jpg" data-echo="images/recommend_image.jpg"/>
+		</div>
+	</div>
+</div>
+
+<script>
+//	$('#datepicker').datepicker({
+//		date: '2014-06-07', // set init date
+//		effect: "slide", // none, slide, fade
+//		position: "bottom",
+//		locale: 'zhCN',
+//		selected: function () {
+//		alert(111);
+//		}
+//	});
+//	echo.init({
+//		offset: 100,
+//		throttle: 250,
+//		unload: false,
+//		callback: function (element, op) {
+//			console.log(element, 'has been', op + 'ed')
+//		}
+//	});
+Array.prototype.map = function (callback) {
+	var selfArray = this;
+	var result = [];
+	for(var i in selfArray){
+		result.push(callback(selfArray[i],i,selfArray));
+	}
+	return result;
+};
+var a = ['a','b','c'];
+var b = a.map(function (v,i,a) {
+	return i + ':' + v;
+});
+	console.log(a.map(function (v,i,a) {
+		return i + ':' + v;
+	}));
+
+</script>
+</body>
+</html>

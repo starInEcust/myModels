@@ -1,0 +1,32 @@
+.go-back{
+	float: left;
+	position: relative;
+	height: 100%;
+	width: 20px;
+	&:before{
+		content: ' ';
+		position: absolute;
+		z-index: 2;
+		top: 16px;
+		right: 4px;
+		display: block;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 9px;
+		border-color: transparent rgb(236, 240, 243) transparent  transparent;
+	}
+	&:after{
+		content: ' ';
+		position: absolute;
+		z-index: 1;
+		top: 16px;
+		right: 6px;
+		display: block;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: 9px;
+		border-color: transparent rgb(82,82,82) transparent  transparent;
+	}
+}

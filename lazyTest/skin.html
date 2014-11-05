@@ -1,0 +1,20 @@
+<div class="view">
+	<div class="item ng-enter" lazy-load-img={{val.img}} show-detail={{val.$key}} go-detail={{val.actionType}} has-detail="{{val.hasDetail}}" ng-repeat="(key,val) in itemData | toArray  | orderBy: val.order">
+		<div class="img-wrap">
+			<h2 class="title" ng-bind="val.title"></h2>
+			<img class="preview" src="images/preview_default.jpg"/>
+			<img ng-show="val.new" class="new-flag" src="images/new_tag.png"/>
+		</div>
+		<div class="info-wrap clearfix">
+			<div class="item-price {{val.priceClass}}" ng-bind="val.price"></div>
+			<div ng-show="val.vipFree" class="vip-free" ng-bind="vipFreeText"></div>
+			<div ng-switch='val.actionType'>
+				<div class="action-button action-download" ng-switch-when="download" pkg-name={{val.$key}} apk-url={{val.apkUrl}} pkg-title={{val.title}} download-type={{val.goodsType}} download-action></div>
+				<div class="action-button action-purchase" ng-switch-when="purchase"></div>
+				<div class="action-button action-downloaded" ng-switch-when="downloaded"></div>
+				<div class="action-button action-detail" ng-switch-when="goDetail"></div>
+				<div ng-switch-default></div>
+			</div>
+		</div>
+	</div>
+</div>
