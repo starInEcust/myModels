@@ -58,20 +58,7 @@
   border-style: solid;
   border-width: @w;
 }
-.transition(@property:all,@duration:1s,@timing:ease,@delay:0){
-  -webkit-transition: @property @duration @timing @delay;
-  -moz-transition: @property @duration @timing @delay;
-  -ms-transition: @property @duration @timing @delay;
-  -o-transition: @property @duration @timing @delay;
-  transition: @property @duration @timing @delay;
-}
-.rotate(@deg){
-  -moz-transform: rotate(@deg);
-  -webkit-transform: rotate(@deg);
-  -o-transform: rotate(@deg);
-  -ms-transform: rotate(@deg);
-  transform: rotate(@deg);
-}
+
 .onePxBorder(@color:@bordercolor){
   border: 1px solid @color;
 }
@@ -160,4 +147,67 @@
 	-webkit-box-align: center;
 	justify-content: center;
 	align-items: center;
+}
+.animate(@name,@duration:0.7s,@iteration-count:1,@delay:0s,@fill-mode:forwards){
+	-webkit-animation-name: @name;
+	-webkit-animation-duration: @duration;
+	-webkit-animation-iteration-count: @iteration-count;
+	-webkit-animation-delay: @delay;
+	-webkit-animation-fill-mode: @fill-mode;
+	animation-name: @name;
+	animation-duration: @duration;
+	animation-iteration-count: @iteration-count;
+	animation-delay: @delay;
+	animation-fill-mode: @fill-mode;
+}
+.perspective(@d:500px){
+	-webkit-perspective: @d;
+	-moz-perspective: @d;
+	-ms-perspective: @d;
+	perspective: @d;
+}
+.transform-style(@type:preserve-3d) {
+	-webkit-transform-style: @type;
+	-moz-transform-style: @type;
+	-ms-transform-style: @type;
+	transform-style: @type;
+}
+
+.transition(@property:all,@duration:1s,@timing:ease,@delay:0){
+	-webkit-transition: @property @duration @timing @delay;
+	-moz-transition: @property @duration @timing @delay;
+	-ms-transition: @property @duration @timing @delay;
+	-o-transition: @property @duration @timing @delay;
+	transition: @property @duration @timing @delay;
+}
+.transform(@args){
+	-webkit-transform:@args;
+	transform:@args;
+}
+.rotate(@deg){
+	-moz-transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+.rotateX(@deg){
+	-webkit-transform:rotateX(@deg);
+	transform:rotateX(@deg);
+}
+.rotateY(@deg){
+	-webkit-transform:rotateY(@deg);
+	transform:rotateY(@deg);
+}
+.rotateZ(@deg){
+	-webkit-transform:rotateZ(@deg);
+	transform:rotateZ(@deg);
+}
+.skew(@x,@y){
+	-webkit-transform: skew(@x,@y);
+	transform: skew(@x,@y);
+}
+.scaleZ(@per){
+	-webkit-transform: scaleZ(@x,@y);
+	transform: scaleZ(@x,@y);
 }

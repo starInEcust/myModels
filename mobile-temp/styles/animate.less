@@ -1,41 +1,45 @@
-
-@-webkit-keyframes buttonLight {
-	from {
-		background: rgba(0, 204, 255,0.5);
-		-webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
-		color: green;
-	}
-	25% {
-		background: rgba(0, 252, 255,0.8);
-		-webkit-box-shadow: 0 0 10px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
-		color: blue;
-	}
-	50% {
-		background: rgba(0, 255, 108,1);
-		-webkit-box-shadow: 0 0 5px rgba(155, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 100, 1);
-		color: orange;
-	}
-	75% {
-		background: rgba(0, 252, 255,0.8);
-		-webkit-box-shadow: 0 0 10px rgba(255, 155, 255, 0.5) inset, 0 0 8px rgba(120, 120, 200, 0.8);
-		color: black;
-	}
-	to {
-		background: rgba(0, 204, 255,0.5);
-		-webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset, 0 0 3px rgba(220, 120, 200, 0.5);
-		color: green;
-	}
-}
-.buttonLight {
-	/*按钮的基本属性*/
-	background: #00ccff;
-	color: #fff;
-	font-size: 16px;
-	text-align: center;
-	text-decoration: none;
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
-	/*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
-	-webkit-animation-name: "buttonLight"; /*动画名称，需要跟@keyframes定义的名称一致*/
-	-webkit-animation-duration: 5s;/*动画持续的时间长*/
-	-webkit-animation-iteration-count: infinite;/*动画循环播放的次数*/
-}
+@import "functionLib";
+//@-webkit-keyframes buttonShake {
+//	from {
+////		.rotateY(30deg);
+//		-webkit-transform:rotate3d(0,0.9,0.1,45deg);
+//		transform:rotate3d(0,0.9,0.1,45deg);
+////		.rotateZ(30deg);
+////		.skew(0,10deg);
+//	}
+//	50% {
+//		-webkit-transform:rotate3d(0,0.9,0.1,-45deg);
+//		transform:rotate3d(0,0.9,0.1,-45deg);
+//	}
+//	to {
+//		-webkit-transform:rotate3d(0,0.9,0.1,45deg);
+//		transform:rotate3d(0,0.9,0.1,45deg);
+////		.rotateY(-30deg);
+////		.skew(0,-10deg);
+//
+//		//		.rotateZ(30deg);
+//	}
+//}
+//.buttonLight {
+//	/*按钮的基本属性*/
+//	background: #00ccff;
+//	color: #fff;
+//	font-size: 16px;
+//	text-align: center;
+//	text-decoration: none;
+//	text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+//	/*调用animation属性，从而让按钮在载入页面时就具有动画效果*/
+//	-webkit-animation-name: "buttonLight"; /*动画名称，需要跟@keyframes定义的名称一致*/
+//	-webkit-animation-duration: 5s;/*动画持续的时间长*/
+//	-webkit-animation-iteration-count: infinite;/*动画循环播放的次数*/
+//}
+//.item{
+//	&.ng-enter{
+//		-webkit-transition:0.5s linear all;
+//		transition:0.5s linear all;
+//		opacity:0;
+//		&.ng-enter-active,{
+//			opacity:1;
+//		}
+//	}
+//}
